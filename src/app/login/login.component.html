@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center mt-3">
+  <form action="" [formGroup]="loginForm">
+    <h6><b>Reactive Form</b></h6>
+    <div class="card">
+      <div class="card-header">
+        <h6>Login Page</h6>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <label for="userName">User Name</label>
+          </div>
+          <div class="col">
+            <input type="text" name="userName" id="userName" class="form-control" formControlName="userName"
+              [ngClass]="{'is-invalid':isSuccess&&(error['userName'].touched && error['userName'].dirty)}"
+              [ngClass]="{'is-valid':isSuccess&&error['userName'].valid}">
+            <div *ngIf="isSuccess&&error['userName'].errors" class="invalid-feedback">Username Required</div>
+            <div *ngIf="isSuccess&&error['userName'].valid" class="valid-feedback">Valid</div>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col">
+            <label for="password">Password</label>
+          </div>
+          <div class="col">
+            <input type="password" name="password" id="password" class="form-control" formControlName="password"
+              [ngClass]="{'is-invalid':isSuccess&&error['password'].errors}"
+              [ngClass]="{'is-valid':isSuccess&&error['password'].valid}">
+            <div *ngIf="isSuccess&&error['password'].errors" class="invalid-feedback">Password Required</div>
+            <div *ngIf="isSuccess&&error['password'].valid" class="valid-feedback">Valid</div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <div class="d-flex justify-content-center gap-2">
+              <button class="btn btn-success" (click)="onSubmit()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

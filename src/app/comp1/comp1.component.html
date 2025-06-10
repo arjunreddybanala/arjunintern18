@@ -1,0 +1,21 @@
+<div id="chart" *ngIf="isVertical">
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-success btn-sm" (click)="rotateButton()">Rotate </button>
+  </div>
+  <apx-chart
+   [series]="chartOptions1.series"
+   [chart]="chartOptions1.chart"
+    [dataLabels]="chartOptions1.dataLabels"
+    [plotOptions]="chartOptions1.plotOptions"
+     [responsive]="chartOptions1.responsive" [xaxis]="chartOptions1.xaxis"
+    [legend]="chartOptions1.legend" [fill]="chartOptions1.fill"></apx-chart>
+</div>
+<div id="chart" *ngIf="!isVertical">
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-success btn-sm" (click)="rotateButton()">Rotate</button>
+  </div>
+  <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart" [dataLabels]="chartOptions2.dataLabels"
+    [plotOptions]="chartOptions2.plotOptions" [xaxis]="chartOptions2.xaxis" [stroke]="chartOptions2.stroke"
+    [fill]="chartOptions2.fill" [yaxis]="chartOptions2.yaxis" [title]="chartOptions2.title"
+    [tooltip]="chartOptions2.tooltip" [legend]="chartOptions2.legend"></apx-chart>
+</div>
