@@ -6,8 +6,9 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { LoginInterceptor } from './login.interceptor';
 import { LoginComponent } from './login/login.component';
-import { ToastrService } from 'ngx-toastr';
+import { provideToastr, ToastrService } from 'ngx-toastr';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(), provideHttpClient(), { provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true }, ToastrService]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimations(), provideToastr(), provideClientHydration(), provideHttpClient(), { provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true }, ToastrService]
 };

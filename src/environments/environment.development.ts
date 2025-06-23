@@ -1,5 +1,6 @@
 const webUrl = 'http://localhost:3000';
-const dev = 'https://shwpdev.dhanushinfotech.com/';
+// const webUrl = location.origin.toLowerCase();
+const dev = 'https://shwpdev.dhanushinfotech.com/'
 const loginUrl = 'https://freeapi.miniprojectideas.com/api/User/Login';
 export const apiUrl = typeof window !== 'undefined' ? location.origin : 'http://localhost:3000';
 

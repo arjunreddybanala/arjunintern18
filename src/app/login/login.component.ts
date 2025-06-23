@@ -2,8 +2,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 import { LoginService } from '../login.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login-page',
@@ -16,7 +17,7 @@ import { LoginService } from '../login.service';
 export class LoginComponent {
   loginForm: FormGroup;
   roleId: any
-  constructor(private fb: FormBuilder, private loginService: LoginService) {
+  constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router, private toastr: ToastrService) {
     this.loginForm = this.fb.group({
       loginname: ['', Validators['required']],
       password: ['', Validators['required']]
@@ -29,7 +30,8 @@ export class LoginComponent {
       this.login();
     }
     else {
-      alert("Enter all feilds")
+      // alert("Enter all feilds")
+      this.toastr.error("Enter all feilds")
     }
   }
   login() {
@@ -37,18 +39,30 @@ export class LoginComponent {
     this.loginService.onLogin(payLoad).subscribe({
       next: (res: any) => {
         if (res) {
-          alert("Login succesfully");
-          console.log(res)
+          // alert("Login succesfully");
+          this.toastr.success("Login successfully")
+          console.log(res);
+          this.router.navigate(['/shwp-home'])
+
         }
         else {
-          alert("Invalid user")
+          // alert("Invalid user")
+          this.toastr.warning("Invalid user")
           console.log(res.message)
         }
       },
       error: (error: any) => {
-        alert("Error");
-        console.log(error.error);
-        console.log(error.message);
+        if (error.status = "EXPECTATION_FAILED") {
+          // alert("Invalid Credentials")
+          this.toastr.warning("Invalid Credentials")
+
+
+        }
+        else {
+          alert("Error");
+          console.log(error.error);
+          console.log(error.message);
+        }
 
       }
     })

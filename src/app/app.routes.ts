@@ -11,18 +11,20 @@ import { Comp8Component } from './comp8/comp8.component';
 import { Comp9Component } from './comp9/comp9.component';
 import { Comp10Component } from './comp10/comp10.component';
 import { ApiapexchartComponent } from './apiapexchart/apiapexchart.component';
+import { ShwpHomeComponent } from './shwp-home/shwp-home.component';
 
 export const routes: Routes = [
-  {path:'login', component:LoginComponent},
-  {path:'comp1', component:Comp1Component},
-  {path:'comp2', component:Comp2Component},
-  {path:'comp3', component:Comp3Component},
-  {path:'comp4', component:Comp4Component},
-  {path:'comp5', component:Comp5Component},
-  {path:'comp6', component:Comp6Component},
-  {path:'comp7', component:Comp7Component},
-  {path:'comp8', component:Comp8Component},
-  {path:'comp9', component:Comp9Component},
-  {path:'comp10',component:Comp10Component},
-  {path:'apiapexchart',component:ApiapexchartComponent}
+  { path: 'login', component: LoginComponent },
+  { path: 'comp1', component: Comp1Component },
+  { path: 'comp2', component: Comp2Component },
+  { path: 'comp3', component: Comp3Component },
+  { path: 'comp4', component: Comp4Component },
+  { path: 'comp5', component: Comp5Component },
+  { path: 'comp6', component: Comp6Component },
+  { path: 'comp7', component: Comp7Component },
+  { path: 'comp8', component: Comp8Component },
+  { path: 'comp9', component: Comp9Component },
+  { path: 'comp10', component: Comp10Component },
+  { path: 'apiapexchart', component: ApiapexchartComponent },
+  { path: 'shwp-home', component: ShwpHomeComponent }
 ];
