@@ -10,6 +10,7 @@ import { Comp7Component } from './comp7/comp7.component';
 import { Comp8Component } from './comp8/comp8.component';
 import { Comp9Component } from './comp9/comp9.component';
 import { Comp10Component } from './comp10/comp10.component';
+import { ApiapexchartComponent } from './apiapexchart/apiapexchart.component';
 
 export const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -22,5 +23,6 @@ export const routes: Routes = [
   {path:'comp7', component:Comp7Component},
   {path:'comp8', component:Comp8Component},
   {path:'comp9', component:Comp9Component},
-  {path:'comp10',component:Comp10Component}
+  {path:'comp10',component:Comp10Component},
+  {path:'apiapexchart',component:ApiapexchartComponent}
 ];

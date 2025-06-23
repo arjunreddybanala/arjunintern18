@@ -8,14 +8,14 @@
       <div class="card-body">
         <div class="row">
           <div class="col">
-            <label for="userName">User Name</label>
+            <label for="loginname">User Name</label>
           </div>
           <div class="col">
-            <input type="text" name="userName" id="userName" class="form-control" formControlName="userName"
-              [ngClass]="{'is-invalid':isSuccess&&(error['userName'].touched && error['userName'].dirty)}"
-              [ngClass]="{'is-valid':isSuccess&&error['userName'].valid}">
-            <div *ngIf="isSuccess&&error['userName'].errors" class="invalid-feedback">Username Required</div>
-            <div *ngIf="isSuccess&&error['userName'].valid" class="valid-feedback">Valid</div>
+            <input type="text" name="loginname" id="loginname" class="form-control" formControlName="loginname"
+              [ngClass]="{'is-invalid':isSuccess&&(error['loginname'].touched && error['loginname'].dirty)}"
+              [ngClass]="{'is-valid':isSuccess&&error['loginname'].valid}">
+            <div *ngIf="isSuccess&&error['loginname'].errors" class="invalid-feedback">loginname Required</div>
+            <div *ngIf="isSuccess&&error['loginname'].valid" class="valid-feedback">Valid</div>
           </div>
         </div>
         <div class="row mt-2">
