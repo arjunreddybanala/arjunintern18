@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input, output } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { LoginService } from '../login.service';
@@ -16,7 +16,8 @@ import { ToastrService } from 'ngx-toastr';
 
 export class LoginComponent {
   loginForm: FormGroup;
-  roleId: any
+  roleId: any;
+  @Input() userLoginName: any;
   constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router, private toastr: ToastrService) {
     this.loginForm = this.fb.group({
       loginname: ['', Validators['required']],
@@ -40,7 +41,9 @@ export class LoginComponent {
       next: (res: any) => {
         if (res) {
           // alert("Login succesfully");
-          this.toastr.success("Login successfully")
+          this.userLoginName = res.data.name
+          this.toastr.success("Login successfully");
+          alert("Wel come " + res.data.name);
           console.log(res);
           this.router.navigate(['/shwp-home'])
 

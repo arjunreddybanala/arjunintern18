@@ -1,0 +1,54 @@
+<div class="d-grid  m-5 ">
+  <div class="card">
+    <div class="card-header">
+      <div class="d-flex justify-content-center gap-5">
+        <div>
+          <h4>Third Party Wedget</h4>
+        </div>
+        <div>
+          <button class="btn btn-outline-primary btm-sm " (click)="home()">Home</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="card-body">
+      <div>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>External System Status</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>User Count</td>
+              <td>{{wedgetData?.externalSystemStats.userCount}}</td>
+            </tr>
+            <tr>
+              <td>School Count</td>
+              <td>{{wedgetData?.externalSystemStats.schoolCount}}</td>
+            </tr>
+            <tr>
+              <td>Activity Count</td>
+              <td>{{wedgetData?.externalSystemStats.activityCount}}</td>
+            </tr>
+            <tr>
+              <td>Referral Count</td>
+              <td>{{wedgetData?.externalSystemStats.referralCount}}</td>
+            </tr>
+            <tr>
+              <td>Test Result Count</td>
+              <td>{{wedgetData?.externalSystemStats.testResultCount}}</td>
+            </tr>
+            <tr>
+              <td>Total Count</td>
+              <td>{{wedgetData?.externalSystemStats.total}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

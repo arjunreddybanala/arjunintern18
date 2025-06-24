@@ -10,5 +10,5 @@ import { provideToastr, ToastrService } from 'ngx-toastr';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimations(), provideToastr(), provideClientHydration(), provideHttpClient(), { provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true }, ToastrService]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimations(), provideToastr({ timeOut: 2000 }), provideClientHydration(), provideHttpClient(), { provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true }]
 };

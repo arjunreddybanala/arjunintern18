@@ -1,19 +1,41 @@
-<!-- <h2>{{username}}</h2> -->
-<div class="d-flex justify-content-center mt-5">
+<!-- <h2>{{loginname}}</h2> -->
+
+<div class="d-grid justify-content-center mt-5">
   <div class="card  m-5">
-    <div class="card-header bg-success text-light">
-      <h5 class="d-flex justify-content-center">SCHOOL HEALTH AND WELLNESS PROGRAM <button
-          class="btn btn-sm btn-warning ms-3" (click)="logout()">Logout</button></h5>
+    <div class="card-header bg-light text-primary">
+      <div class="d-flex justify-content-center">
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ministry_of_Education_India.svg/1200px-Ministry_of_Education_India.svg.png"
+            style="height: 50px;" alt="">
+        </div>
+        <div class="ms-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Ministry_of_Health_India.svg"
+            style="height: 50px; " alt="">
+        </div>
+        <div>
+          <h4 class="d-flex justify-content-center mt-2 ms-2"><b>
+              <marquee behavior="" direction="">SCHOOL HEALTH AND WELLNESS PROGRAM</marquee>
+            </b></h4>
+        </div>
+        <div>
+          <button class="btn btn-sm btn-warning ms-3 mt-2" aria-pressed="true" (click)="logout()">Logout</button>
+        </div>
+        <div class="ms-2">
+          <img
+            src="https://play-lh.googleusercontent.com/7aeh6STl_MtF-XHW3jKEOVSGtNup7AwkIyysJn9GfbG0L_wz2oZ1HGqpBHXCOJJxHw"
+            style="height: 50px; border-radius: 30px;" alt="">
+        </div>
+      </div>
     </div>
     <div class="card-body">
       <div class="d-flex ">
         <div>
-          <img
-            src="https://play-lh.googleusercontent.com/7aeh6STl_MtF-XHW3jKEOVSGtNup7AwkIyysJn9GfbG0L_wz2oZ1HGqpBHXCOJJxHw"
-            alt="" style="height: 500px; ">
+          <img class="mainimg" src="../../assets/home_img/0.jpeg.png" class="img-fluid img-logo-2" alt=""
+            style="height: 500px; border-radius: 10px; margin-right: 20px;">
         </div>
         <div>
-          <h5 class="mb-2 fw-bold mt-3">Overveiw about SHWP</h5>
+          <h4 class="mb-2 fw-bold mt-3">Overveiw about SHWP : </h4>
           <p>
             The <b>School Health and Wellness Programme</b> (SHWP) is a collaborative effort between the
             <b>Ministry of
@@ -49,6 +71,9 @@
               System</b>
             (MIS) has been developed for efficient reporting and monitoring.</p>
         </div>
+      </div>
+      <div class="d-flex justify-content-center mt-2">
+        <button class="btn btn-outline-primary col-4" (click)="thirdPartyWedget()">Get Third Party Wedget</button>
       </div>
     </div>
   </div>

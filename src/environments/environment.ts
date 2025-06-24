@@ -2,11 +2,11 @@ const webUrl = 'http://localhost:3000';
 // const webUrl = location.origin.toLowerCase();
 const dev = 'https://shwpdev.dhanushinfotech.com/'
 // export const apiUrl = typeof window !== 'undefined' ? location.origin : 'http://localhost:3000';
-const loginUrl = 'https://freeapi.miniprojectideas.com/api/User/Login'
 export const environment = {
   baseUrl: webUrl.includes('localhost') ? dev : (webUrl + "/"),
   login: 'shwp/login',
-  emailLogin: loginUrl
+  thrdPwdgt: 'shwp-utility/v2/stats/getallcount',
+
 };
 // baseUrl: webUrl.includes('localhost') ? dev : (webUrl + "/"),
 // landing: 'shwp/dashboard/udisedata',
